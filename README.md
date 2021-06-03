@@ -1,0 +1,99 @@
+# Swift UI
+
+- Lanzado en 2019.
+- El mismo codigo para todos los entornos.
+- Visualizacion instantanea.
+- Poder realizar drag and drog.
+- Programacion declarativa.
+- Storyboard es remplazado por canvas.
+
+## Programacion declarativa e imperativo
+
+Swift UI no es un lenguaje declarativo.
+
+MVVM: El patrón modelo–vista–modelo de vista es un patrón de arquitectura de software. Se caracteriza por tratar de desacoplar lo máximo posible la interfaz de usuario de la lógica de la aplicación.
+
+Swift UI convive con los diferentes entornos de storyboard y UI Kit
+
+- UIViewRepresentable: Si se desea cambiar un componente de UI Kit a Swift UI. A todo se le añade Representable.
+
+## Uso Texto en Swift UI
+
+- UILabel => Text(""): Ahora esta clase se llama solo "Text" (Only read)
+
+- Command + Click sobre un elemento, despligua el menu de opciones
+
+<img src="command+click.png" />
+
+## Editar estilos de texto
+
+Se deben llamar los modificadores tipo css, estos se llaman tipo los metodos de una clase.
+
+El parametro del modificador va dentro del metodo
+
+- .fontWight(.bold): Viene del objeto Text
+
+- .font(.title): Esto funciona como bootstrap donde tenemos clases de texto estandar, siempre usar los estandares.
+
+
+```swift
+Text("The first UI APP")
+    .fontWeight(.bold)
+    .font(.title)
+    .padding()
+
+Text("Secod text")
+    .font(.system(size: CGFloat(16)))
+    .padding()
+
+```
+
+Source: https://developer.apple.com/documentation/swiftui/font
+
+- .foregroundColor() Le especifica el color a un texto
+
+## Tipografia
+
+Nota: Todos los textos vienen con la letra del sistema.
+
+¿Como Cambiar la tipografia de letra del sistema?
+
+Para ello se agrega el parametro .custom("Nombre de la fuente", size: 25 OR .large) al metodo
+
+<b>Como agregar fuentes personalizadas?</b>
+Se agrega la carpeta con la fuente personalizada, y luego se agrega con .custom como primer parametro.
+
+```swift
+.font(.custom("Arial", size: CGFloat(20)))
+```
+
+## Texto de multiples lineas
+
+Simplemente basta con agregar el texto al metodo a la Clase Text() y ya este se muestra completo.
+
+<strong>Alineado del texto</strong>
+
+Podemos usar la propiedad: .multilineTextAlignment(), a esta propiedad le podemos pasar las siguientes propiedades:
+
+- .leading: El texto inicia a la izquierda. (Izquierda)
+- .center: El texto inicia al centro.
+- .trailing: El texto inicia al final (Derecha)
+
+<strong>Limitar el numero de lineas</strong>
+
+Se utiliza la propiedad .lineLimit(10) al final agrega los 3 puntos (Lo que se conoce como Tail en Ingles)
+
+* Por defecto el valor de .lineLimit(nill) es nil
+
+<strong>Como modificar donde se corta el texto de .lineLimit(??)</strong>
+
+Para ello se utiliza la propiedad: .trucationModel(.) Se le pasan los siguientes parametros
+
+.head : Agrega los tres puntos al inicio de la ultima linea.
+.middle: Agrega los tres puntos el centro de la ultima linea.
+.tail: Agrega los tres puntos al final. (Valor por defecto)
+
+
+
+
+
