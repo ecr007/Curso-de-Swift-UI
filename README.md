@@ -89,9 +89,24 @@ Se utiliza la propiedad .lineLimit(10) al final agrega los 3 puntos (Lo que se c
 
 Para ello se utiliza la propiedad: .trucationModel(.) Se le pasan los siguientes parametros
 
-.head : Agrega los tres puntos al inicio de la ultima linea.
-.middle: Agrega los tres puntos el centro de la ultima linea.
-.tail: Agrega los tres puntos al final. (Valor por defecto)
+- .head : Agrega los tres puntos al inicio de la ultima linea.
+- .middle: Agrega los tres puntos el centro de la ultima linea.
+- .tail: Agrega los tres puntos al final. (Valor por defecto)
+
+## Padding and Spacing
+
+- lineSpacing(CGFloat(1)): Esta propiedad se utiliza para separar las lineas, es el interlineado del texto.
+
+- padding(): Se le puede pasar CGFloat, pero es mejor usar el estandard.
+
+## Rotar el Texto
+
+- .rotationEffect(.degrees(80)) : Rota un texto 80 grados; Como segungo parametro opcional se le puede definir un anchor,
+a este anchor se le un UnitPoint(x:, y:) donde se coloca la info de donde comienza la rotación
+
+- .rotation3DEffect(.degrees(50), axis: (x: 1, y: 0, z: 0)) Se rota un texto en 3D
+
+- .shadow(color: .gray, radius: 1, x: 5, y: 10)
 
 
 
