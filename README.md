@@ -99,6 +99,14 @@ Para ello se utiliza la propiedad: .trucationModel(.) Se le pasan los siguientes
 
 - padding(): Se le puede pasar CGFloat, pero es mejor usar el estandard.
 
+El padding recibe parametros como los siguiente, donde se indica la direccion del padding
+
+- .padding(.top, 16)
+- .padding(.trailing, 16)
+- .padding(.bottom, 16)
+- .padding(.leading, 16)
+
+
 ## Rotar el Texto
 
 - .rotationEffect(.degrees(80)) : Rota un texto 80 grados; Como segungo parametro opcional se le puede definir un anchor,
