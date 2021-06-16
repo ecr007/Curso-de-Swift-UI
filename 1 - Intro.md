@@ -35,6 +35,7 @@ El parametro del modificador va dentro del metodo
 
 - .font(.title): Esto funciona como bootstrap donde tenemos clases de texto estandar, siempre usar los estandares.
 
+- .font(.system(.title, design: .rounded)): Esto especifica que el texto es enfocado o redoneado, hace que se vea mejor.
 
 ```swift
 Text("The first UI APP")
@@ -47,6 +48,8 @@ Text("Secod text")
     .padding()
 
 ```
+
+Nota: A los textos se les puede poner tamaños con el modificador Frame
 
 Source: https://developer.apple.com/documentation/swiftui/font
 
@@ -105,6 +108,8 @@ El padding recibe parametros como los siguiente, donde se indica la direccion de
 - .padding(.trailing, 16)
 - .padding(.bottom, 16)
 - .padding(.leading, 16)
+
+Nota: El orden de los padding altera el resultado.
 
 
 ## Rotar el Texto

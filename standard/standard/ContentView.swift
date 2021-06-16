@@ -9,26 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            HStack {
-                Image(systemName: "heart.fill")
-                    .imageScale(.small)
-                Text("Small")
-            }
-            HStack {
-                Image(systemName: "heart.fill")
-                    .imageScale(.medium)
-                Text("Medium")
-            }
-
-            HStack {
-                Image(systemName: "chart.bar.fill")
-                    .imageScale(.large)
-                Text("Large")
-                    .font(.title)
-            }
-        }
-        
+			Image("image2")
+				.resizable()
+				.aspectRatio(contentMode: .fill)
+				//.edgesIgnoringSafeArea(.all)
+				.frame(width: 300, height: 300, alignment: .trailing)
+				.clipped()
+				.clipShape(Circle())
+				//.opacity(0.8)
+				.overlay(
+					
+					Text("Battle in the flight !!!")
+						.font(.title2)
+						.foregroundColor(.white)
+						.shadow(color: .black, radius: 1, x: 0, y: 0),
+					alignment: .topTrailing
+						
+					
+				
+				)
+		
+			
     }
 }
 
