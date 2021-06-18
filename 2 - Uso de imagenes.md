@@ -64,3 +64,14 @@ Image("name of image")
 - .opacity(0.2 Or 1) : Recibe un Float con la dimencion de la imagen
 
 - .cornerRadius(INT) : Es el border radius.
+
+## Imagen perfecta
+
+```
+Image("est-1")
+    .resizable()
+    .aspectRatio(contentMode: .fill)
+    .frame(minWidth: 0, idealWidth:0, maxWidth: .infinity, maxHeight: 200,alignment: .center)
+    .clipped()
+    .background(Color(red: 230/255, green: 230/255, blue: 230/255))
+```

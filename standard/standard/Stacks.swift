@@ -11,16 +11,49 @@ struct Stacks: View {
 	
 	var body: some View {
 		VStack(alignment: .center, spacing: 24, content: {
-			header(h: .bold)
+			HeaderView(weight: .bold)
 			
-			HStack {
-				Plans(name: "Basico", price: "99", bg_color: Color.green)
+			VStack(alignment: .center, spacing: 32, content: {
 				
-				Plans(name: "Gold", price: "180", bg_color: Color.gray)
+			
+				HStack {
+					PlansView(name: "Basico", price: "99",text_color: Color.white, bg_color: Color.green)
+						
+					
+					ZStack {
+						PlansView(name: "Gold", price: "180", text_color: Color.black, bg_color: Color(red: 230/255, green: 230/255, blue: 230/255))
+						
+						Text("New")
+							.font(.caption)
+							.padding(.vertical,4)
+							.padding(.horizontal,16)
+							.foregroundColor(.white)
+							.background(Color.red)
+							.offset(x: 0, y: -55)
+					}
+					
+					
+				}
 				
-				
-			}
+				ZStack {
+					PlansView(name: "Premium", price: "350",text_color: Color.black, bg_color: Color.yellow, icon: "lightbulb")
+						
+					
+					Text("Esta es una oferta")
+						.font(.caption)
+						.padding(.vertical,4)
+						.padding(.horizontal,16)
+						.foregroundColor(.white)
+						.background(Color.red)
+						.offset(x: 0, y: -80)
+				}
+		
+			}).padding(.horizontal)
+			
+			Spacer()
 		})
+		
+		
     }
 }
 
@@ -30,43 +63,57 @@ struct Stacks_Previews: PreviewProvider {
     }
 }
 
-public func header(h:Font.Weight) -> VStack<TupleView<(Text, Text)>> {
-	return VStack(alignment: .center, spacing: nil, content: {
-		Text("EverSoft")
-			.font(.system(.title2, design: .rounded))
-			.fontWeight(h)
-		
-		Text("Planes Disponibles:")
-			.font(.system(.title2, design: .rounded))
-			.fontWeight(h)
-		
-		
-	})
+struct HeaderView: View{
+	
+	var weight:Font.Weight
+	
+	var body: some View{
+		VStack(alignment: .center, spacing: nil, content: {
+			Text("Tarea Stacks !!!")
+				.font(.system(.title, design: .rounded))
+				.fontWeight(weight)
+			
+			Text("Planes Disponibles:")
+				.font(.system(.title2, design: .rounded))
+				.fontWeight(weight)
+			
+			
+		})
+	}
 }
 
-
-
-struct Plans: View {
+struct PlansView: View {
 	var name:String
 	var price:String
+	var text_color:Color
 	var bg_color:Color
+	var icon:String?
 	
 	var body: some View {
 		VStack{
+			
+			icon.map({
+				Image(systemName: $0)
+					.font(.system(size: CGFloat(40)))
+					.foregroundColor(text_color)
+			});
+			
 			Text("Plan " + name)
 				.font(.system(.title3, design: .rounded))
 				.fontWeight(.bold)
-				.foregroundColor(.white)
+				.foregroundColor(text_color)
 			
 			Text("US$" + price)
-				.font(.system(.largeTitle, design: .rounded))
+				.font(.system(.title, design: .rounded))
 				.fontWeight(.black)
-				.foregroundColor(.white)
+				.foregroundColor(text_color)
 			
 			Text("* Aplican ITBIS")
 				.font(.system(.body,design: .rounded))
-				.foregroundColor(.white)
+				.foregroundColor(text_color)
 		}
+		
+		.frame(minWidth: 0, idealWidth: 0, maxWidth: .infinity,alignment: .center)
 		.padding()
 		.background(bg_color)
 		.cornerRadius(10)

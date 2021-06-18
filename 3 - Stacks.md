@@ -59,3 +59,39 @@ struct Plans: View {
 // Uso
 Plans(name: "Basico", price: "99", bg_color: Color.green)
 ```
+
+Nota: Como agregar color personalizados ahora: Color(red: 150/255, greed: 50/255, blue: 30/255)
+
+## Opciones con frame
+
+A este metodo se le pasa minWidth, maxWidth, minHeight, maxHeight. Tambien para especificar 100% se utiliza el enumerado .infinity como parametro de uno de estos en frame
+
+## ZStack
+
+Este Stack ofrece mas ventajas que Overlay ya que es mas dinamico a la hora de insertar views.
+
+- .offset(x: 0, y: 0): Esta propiedad se utiliza para mover los contenidos dentro de un ZStack, aunque puede utilizarse en cualquier Stack o View
+
+## Ancho automatico
+
+.frame(minWidth: 0, idealWidth: 0, maxWidth: .infinity,alignment: .center)
+
+## Uso de map
+
+map es un metodo seguro para buscar en opcionales y/o array, ejemplo
+
+```swift
+variable.map({
+
+	// Coloco codigo a ejecutar
+	$0 // Es el valor 0
+	$1 // Es el valor 1
+});
+
+icon.map({
+	Image(systemName: $0)
+		.font(.system(size: CGFloat(40)))
+		.foregroundColor(text_color)
+});
+
+```
