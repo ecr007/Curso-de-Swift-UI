@@ -24,12 +24,12 @@ VStack(alignment: .center, spacing: 32, content: {
 
 ## Reutilizacion de Views
 
-Para ello puedo crear Struct que retornen dichos view, haciendo click derecho sobro el View y Seleccionar Extract To Subview, siempre el View sea de tamaño que recomiende su utilización.
+Para ello puedo crear Struct que retornen dichos view, haciendo click derecho sobro el View y Seleccionar Extract To Subview, siempre que el View sea de tamaño que recomiende su utilización.
 
 <b>Tambien es posible crear el Struct directamente, con parametros para que sea reutilizable:</b>
 
 ```swift
-struct Plans: View {
+struct PlanView: View {
 	var name:String
 	var price:String
 	var bg_color:Color
@@ -60,7 +60,7 @@ struct Plans: View {
 Plans(name: "Basico", price: "99", bg_color: Color.green)
 ```
 
-Nota: Como agregar color personalizados ahora: Color(red: 150/255, greed: 50/255, blue: 30/255)
+Nota: Como agregar color personalizados ahora: Color(red: 150/255, green: 50/255, blue: 30/255)
 
 ## Opciones con frame
 
@@ -95,3 +95,9 @@ icon.map({
 });
 
 ```
+
+Nota: Es recomendable siempre, tener una carpeta de views donde almacenemos las View que vallamos a reutilizar.
+
+## Prioridad en los views
+
+- .layoutPriority(INT): Asigna una prioridad que entre mas alta mas grande, si le sigue un Spacer este no quitara tanto espacio segun la prioridad definida.

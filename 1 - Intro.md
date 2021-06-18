@@ -108,6 +108,7 @@ El padding recibe parametros como los siguiente, donde se indica la direccion de
 - .padding(.trailing, 16)
 - .padding(.bottom, 16)
 - .padding(.leading, 16)
+- .padding([.top, .horizontal]) // Varios padding en uno | Se evita el doble padding
 
 Nota: El orden de los padding altera el resultado.
 
@@ -120,6 +121,19 @@ a este anchor se le un UnitPoint(x:, y:) donde se coloca la info de donde comien
 - .rotation3DEffect(.degrees(50), axis: (x: 1, y: 0, z: 0)) Se rota un texto en 3D
 
 - .shadow(color: .gray, radius: 1, x: 5, y: 10)
+
+## Colores del sistema
+
+- .primary
+- .secundary
+
+## Como Debug sin compilar
+
+Se muestra la terminal : View -> Debug Area -> Activate Console
+
+Luego en el preview se le da click derecho al boton de play en preview debug
+
+
 
 
 

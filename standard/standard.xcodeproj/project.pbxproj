@@ -13,6 +13,7 @@
 		C3A8282D26688100004DD063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A8282C26688100004DD063 /* Assets.xcassets */; };
 		C3A8283026688100004DD063 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3A8282F26688100004DD063 /* Preview Assets.xcassets */; };
 		C3A8283326688100004DD063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3A8283126688100004DD063 /* LaunchScreen.storyboard */; };
+		DD0368E8267D34390084FFEE /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0368E7267D34390084FFEE /* ButtonsView.swift */; };
 		DDEC0FA7267A65DE00DE2422 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC0FA6267A65DE00DE2422 /* Stacks.swift */; };
 		DDEC0FA9267ABB8C00DE2422 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC0FA8267ABB8C00DE2422 /* CardView.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		C3A8282F26688100004DD063 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C3A8283226688100004DD063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3A8283426688100004DD063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD0368E7267D34390084FFEE /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		DDEC0FA6267A65DE00DE2422 /* Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
 		DDEC0FA8267ABB8C00DE2422 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 				DDEC0FA6267A65DE00DE2422 /* Stacks.swift */,
 				DDEC0FA8267ABB8C00DE2422 /* CardView.swift */,
 				C3A8282E26688100004DD063 /* Preview Content */,
+				DD0368E7267D34390084FFEE /* ButtonsView.swift */,
 			);
 			path = standard;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0368E8267D34390084FFEE /* ButtonsView.swift in Sources */,
 				DDEC0FA7267A65DE00DE2422 /* Stacks.swift in Sources */,
 				C3A8282726688100004DD063 /* AppDelegate.swift in Sources */,
 				C3A8282926688100004DD063 /* SceneDelegate.swift in Sources */,

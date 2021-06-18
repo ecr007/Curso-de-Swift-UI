@@ -10,15 +10,22 @@ import SwiftUI
 struct CardView: View {
     var body: some View {
 		NavigationView{
-			
-			VStack {
-				CardSingleView(title: "Build Your First iPhone App - iOS 14 Apps Using Swift 5", img: "est-1", author: "Ever Cuevas")
+			ScrollView(.horizontal){
 				
-				CardSingleView(title: "Build Your First iPhone App - iOS 14 Apps Using Swift 5", img: "est-4", author: "Beatriz de Cuevas")
+				HStack{
+					CardSingleView(title: "Build Your First iPhone App - iOS 14 Apps Using Swift 5", img: "est-1", author: "Ever Cuevas")
+						.frame(width: 350)
+				
+					CardSingleView(title: "Build Your First iPhone App - iOS 14 Apps Using Swift 5", img: "est-2", author: "Beatriz de Cuevas").frame(width: 350)
+				
+					CardSingleView(title: "Build Your First iPhone App - iOS 14 Apps Using Swift 5", img: "est-3", author: "Beatriz de Cuevas").frame(width: 350)
+				
+					CardSingleView(title: "Build Your First iPhone App - iOS 14 Apps Using Swift 5", img: "est-4", author: "Beatriz de Cuevas").frame(width: 350)
+				}
 				
 				Spacer()
 			}
-			.navigationTitle("Cursos Gratis")
+			.navigationTitle("EverSOFT")
 			.navigationBarTitleDisplayMode(.large)
 			
 		}
@@ -54,14 +61,21 @@ struct CardSingleView: View {
 					.font(.title2)
 					.fontWeight(.bold)
 					.frame(minWidth: 0, idealWidth: 0, maxWidth: .infinity, alignment: .leading)
+					.padding(.horizontal)
 				
 				Text(author)
 				.font(.body)
 				.foregroundColor(Color(red:150/255,green:150/255,blue:150/255))
 				.frame(minWidth: 0, idealWidth: 0, maxWidth: .infinity, alignment: .leading)
+					.padding([.horizontal,.bottom])
 				
 			})
 		})
-		.padding()
+		.overlay(
+			RoundedRectangle(cornerRadius: 3)
+				.stroke(Color.gray.opacity(0.5), lineWidth: 1)
+				
+		)
+		.padding([.top, .horizontal])
 	}
 }

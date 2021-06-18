@@ -35,6 +35,12 @@ VStack {
 }
 ```
 
+## Como ponerle el fontWeight a los SF Symbols
+
+```
+.font(.system(size: 18, weight: .light, design: .default))
+```
+
 ## Imagenes personalizadas
 
 Para ello se agrega la imagen como de constumbre a la carpeta Assets y luego se llama con la funcion:
@@ -53,7 +59,7 @@ Image("name of image")
 - .aspectRatio(contentMode: .fit or fill): Es una manera mas amplica de definir el tipo de redimencionado de una imagen
 - .frame() : Define el tamaño del contenedor de la imagen que como en todo caso es el View Parent Class
 
-- .clipped(): Hay veces que cuando aplicamos fill a una imagen esta cubre toda la panta, incluso cuando se le pasa un tamaño con frame, para apelear este problema se utiliza este metodo.
+- .clipped(): (Es Overflow:hidden) Hay veces que cuando aplicamos fill a una imagen esta cubre toda la pantalla, incluso cuando se le pasa un tamaño con frame, para apelear este problema se utiliza este metodo.
 
 ## Imagenes Circulares
 
@@ -61,7 +67,7 @@ Image("name of image")
 
 ## Opacidad
 
-- .opacity(0.2 Or 1) : Recibe un Float con la dimencion de la imagen
+- .opacity(0.2 Or 1) : Recibe un Float con la dimencion de la opacidad
 
 - .cornerRadius(INT) : Es el border radius.
 
