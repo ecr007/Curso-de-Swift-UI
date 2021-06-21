@@ -6,7 +6,7 @@ LA PROPIEDAD ES!!!
 
 Esta remplaza el VStack, y por alte de "magia" tenemos un lista con scroll :) 
 
-```
+```swift
 ScrollView{
 	Contenido
 }
@@ -24,7 +24,7 @@ Esto para que se vea que es un carrousel (Ejemplo completo):
 
 <strong>Nota: Es importante que los View tengan un ancho definido</strong>
 
-```
+```swift
 NavigationView{
 	ScrollView(.horizontal){
 		
