@@ -1,19 +1,21 @@
 # Navegación entre vistas
 
-```
+```swift
 NavigationView{
 	// Contenido
 
 
 }
-
+```
 <strong>Propiedades</strong>
 
 - .navigationBarTitle("Titulo de la navegación")
 
 ## Desplazarnos de una vista a otra
 
-Para ello usamos la propiedad NavigationLink{destination: StructVista Instance} | Esta debe estar dentro de un NavigationView y arropar el contenido del List para que de esta manera la lista sea clickqueable.
+Para ello usamos la propiedad NavigationLink{destination: StructVista Instance} |
+
+Esta debe estar dentro de un NavigationView y arropar el contenido del List para que de esta manera la lista sea clickqueable.
 
 Ej:
 
