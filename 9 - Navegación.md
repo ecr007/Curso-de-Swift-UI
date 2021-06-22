@@ -30,7 +30,7 @@ NavigationView{
 	}
 	.navigationBarTitle("Titulo de la seccion");
 }
-
+```
 ## Personalizar la barra de navegación
 
 Tenemos diferentes tipos de NavigationView por default:
