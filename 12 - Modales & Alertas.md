@@ -75,6 +75,7 @@ Button(action: {
 }, Label: {
 	// Text
 })
+```
 
 ## Alertas en SWIFT UI
 
