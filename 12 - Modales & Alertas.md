@@ -13,7 +13,10 @@ Supongamos que tenemos una vista de detalle "DetailView" para mostrar dicha vist
 @State var userSelect:User? // Instancia del usuario para pasarle al detalle
 ```
 
-Ya luego en el List debemos usarar la propiedad .sheet para presentar el modal, recibe un Binding de @State (showModal) para encargarse de cambiar la variable (Asignar false) y un Clousure para mostrar el View en el modal
+Ya luego en el List debemos usarar la propiedad .sheet para presentar el modal, recibe un Binding de @State (showModal)
+para encargarse de cambiar la variable (Asignar false) y un Clousure para mostrar el View en el modal
+
+* Se le asigna al Stack principal
 
 ```swift
 .sheet(isPresented: self.$showModal){

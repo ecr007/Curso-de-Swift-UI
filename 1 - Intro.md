@@ -88,6 +88,12 @@ Se utiliza la propiedad .lineLimit(10) al final agrega los 3 puntos (Lo que se c
 
 * Por defecto el valor de .lineLimit(nill) es nil
 
+Nota: habeces el .lineLimit no funciona por lo que se debe fixiar:
+
+```
+.fixedSize(horizontal: false, vertical: true)
+```
+
 <strong>Como modificar donde se corta el texto de .lineLimit(??)</strong>
 
 Para ello se utiliza la propiedad: .trucationModel(.) Se le pasan los siguientes parametros
@@ -133,6 +139,14 @@ Se muestra la terminal : View -> Debug Area -> Activate Console
 
 Luego en el preview se le da click derecho al boton de play en preview debug
 
+
+## Colocar un Background
+
+```swift
+var body: some View {
+    Color.green.edgesIgnoringSafeArea(.all)
+}
+```
 
 
 

@@ -74,3 +74,43 @@ struct MyBtn: View {
 	}
 }
 ```
+
+## ObservableObject
+
+Se utiliza para observar cambios y transmitirlos a la vista, por ejemplo con el uso de Alamofire
+
+<b>Como utilizarlo?</b>
+Si tenemos una struct de datos, por ejemplo User
+
+```swift
+struct User: Codeable{
+	
+	var age:Int
+	var name:String
+}
+```
+
+Podemos observar los cambios que le suceden a esta vista con un observer:
+
+```swift
+class ObserverUser: ObservableObject{
+
+	// Le agregamos un Published que estara al tanto del usuario
+	@Published var user:User
+
+	init(){
+		// Codigo de AlamoFire Para llenar la info del usuario
+	}
+}
+```
+
+<b>Luego en nuestra vista declaramos una instancia de nuestro observador</b>
+
+```swift
+@ObservedObject var userObserver = ObserverUser()
+
+// Esto ara que todo lo que sucede en el observador sera transmitido a la vista
+// Si en el observadorClass colocamos un print, lo veremos al compilar.
+
+// Y como esta variable es una instancia del ObserverUser tengo acceso al user published
+```
