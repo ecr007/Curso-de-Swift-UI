@@ -71,7 +71,7 @@ En el detailView debemos declarar la variable @Environment esta se declara dentr
 // Luego para ocultar via boton:
 
 Button(action: {
-	self.presentationMode.wrappedValue.dissmiss()
+	self.presentationMode.wrappedValue.dismiss()
 }, Label: {
 	// Text
 })
