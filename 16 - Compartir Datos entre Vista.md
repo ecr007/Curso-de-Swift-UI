@@ -48,3 +48,64 @@ Esta debe ser una propiedad de la clase Observer (ObservableObject)
 <img src="dependencia.png" alt="">
 
 Nota: donde quiera que se haga uso del EnvironmentObject, esta variable debe ser inyectada como dependencia.
+
+
+## Un ejemplo RANDMOM
+
+```swift
+struct LoginView: View {
+    var body: some View {
+        ...
+    }
+}
+
+struct NextView: View {
+    var body: some View {
+        ...
+    }
+}
+
+// Your starting view
+struct ContentView: View {
+
+    @EnvironmentObject var userAuth: UserAuth 
+
+    var body: some View {
+        if !userAuth.isLoggedin {
+            LoginView()
+        } else {
+            NextView()
+        }
+
+    }
+}
+
+/*Debe manejar su proceso de inicio de sesión en su modelo de
+datos y usar enlaces como @EnvironmentObjectpara pasar isLoggedina su vista*/
+
+import Combine
+
+class UserAuth: ObservableObject {
+
+  let didChange = PassthroughSubject<UserAuth,Never>()
+
+  // required to conform to protocol 'ObservableObject' 
+  let willChange = PassthroughSubject<UserAuth,Never>()
+
+  func login() {
+    // login request... on success:
+    self.isLoggedin = true
+  }
+
+  var isLoggedin = false {
+    didSet {
+      didChange.send(self)
+    }
+
+    // willSet {
+    //       willChange.send(self)
+    // }
+  }
+}
+
+```

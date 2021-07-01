@@ -65,10 +65,9 @@ NavigationLink(destination: EmptyView(), isActive: $isPushed, label: {
 ## Ejecutar un Navigation Link sin necesidad de tocar
 
 ```swift
-	VStack{
-		...
-	}
-	.navigate(to: MainPageView(), when: $willMoveToNextScreen)
+	NavigationLink(destination: NewView(), isActive: $action) {
+        EmptyView() // Vista que no contiene ningun contenido
+    }
 ```
 
 ## Ejecutar Codigo Swift en un View de UI y Modificar la aperiencia del NavigationView

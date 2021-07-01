@@ -79,3 +79,19 @@ List(users){ user in
 }
 ```
 
+## Encabezados usando Lista
+
+```swift
+List {
+    Section.init {
+        Text("Header")
+    }
+    ForEach(numbers, id: \.self) {
+        Text("\($0)")
+    }
+    .onDelete { index in
+        // delete item
+    }
+}
+```
+
