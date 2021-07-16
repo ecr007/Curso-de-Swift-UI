@@ -81,3 +81,28 @@ Image("est-1")
     .clipped()
     .background(Color(red: 230/255, green: 230/255, blue: 230/255))
 ```
+
+## Opciones
+
+Por ejemplo, esto crea una vista de imagen y tiñe todo de rojo:
+
+```swift
+Image("cat")
+    .colorMultiply(.red)
+```
+
+Puede ajustar la saturación de las vistas a cualquier cantidad, donde 0.0 es completamente gris y 1.0 es su color original:
+
+```swift
+Image("boats")
+    .saturation(0.3)
+```
+
+Incluso puede ajustar dinámicamente el contraste de una vista utilizando el contrast()modificador. Un valor de 0.0 no produce contraste (una imagen gris plana), 1.0 le brinda la imagen original y todo lo que esté por encima de 1.0 agrega contraste.
+
+Entonces, esto reducirá el contraste de la imagen al 50%:
+
+```swift
+Image("sunset")
+    .contrast(0.5)
+```

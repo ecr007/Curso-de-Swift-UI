@@ -45,3 +45,10 @@ NavigationView{
 	.navigationBarTitleDisplayMode(.large)
 	
 }
+```
+
+## Ocultar indicadores
+
+```
+ScrollView(.horizontal,showsIndicators: false)
+```

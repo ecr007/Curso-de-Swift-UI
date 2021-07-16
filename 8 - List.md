@@ -39,6 +39,16 @@ List(1...5, id: \.self){ key in
 
 - .indices: Es una propiedad con la que cuentan los Array y nos retorna el index o posicion.
 
+```swift
+ForEach(visitClass.indices){ i in
+    
+    BtnFilterVidiew(current: $currentVisitClass[i], label: visitClass[i].abbr){
+        clearVisitClass = true
+        currentVisitClass[i].toggle()
+    }
+}
+```
+
 <strong>Nota: Si se desea una imagen redonda el corderRadius debe ser la mitad de tamaño del frame</strong>
 
 ## Uso de Struct Con List
@@ -94,4 +104,24 @@ List {
     }
 }
 ```
+
+## Lista con PULL REQUEST
+
+```swift
+List(mailbox.conversations) {
+    ConversationCell($0)
+}
+.refreshable {
+    await mailbox.fetch()
+}
+```
+
+## Como Quitar el BG de una lista
+
+// Clear Bg
+UITableView.appearance().backgroundColor = .clear<br>
+UITableViewCell.appearance().backgroundColor = .clear
+
+A los hijos le aplicamos
+.listRowBackground(Color.clear)
 
