@@ -17,3 +17,9 @@ TextField("PlaceHolder",$bindingState)
 SecureField("PlaceHolder",$bindingStatePass)
 	.properties
 ```
+
+## Estilo por defecto
+
+```swift
+ .textFieldStyle(RoundedBorderTextFieldStyle())
+```

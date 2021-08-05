@@ -97,3 +97,16 @@ Alert(....)
 }
 ```
 
+
+## Mostrar ActionSheet
+
+```swift
+.actionSheet(isPresented: $showingActionSheet) {
+    ActionSheet(title: Text("Change background"), message: Text("Select a new color"), buttons: [
+        .default(Text("Red")) { self.backgroundColor = .red },
+        .default(Text("Green")) { self.backgroundColor = .green },
+        .default(Text("Blue")) { self.backgroundColor = .blue },
+        .cancel()
+    ])
+}
+```

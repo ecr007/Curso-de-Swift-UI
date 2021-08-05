@@ -77,7 +77,42 @@ NavigationLink(destination: EmptyView(), isActive: $isPushed, label: {
 
 init(){
 	let appeareance = UINavigationBarAppearence()
+
+	UINavigationBar.appearance().backgroundColor = .orange
+	UINavigationBar.appearance().tintColor = .green
+	UINavigationBar.appearance().barTintColor = .yellow
+	UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.red]
+	UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.red]
 	
 }
+```
+## Cambiar aspaecto
 
+You can observe the bounds of the navigationBar and change the title using a check on the height of the navigationBar.
+
+1. for Small Title, height of navigationBar = 44
+
+2. for Large Title, height of navigationBar > 44
+
+```
+
+class VC: UIViewController {
+    var observer: NSKeyValueObservation?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.observer = self.navigationController?.navigationBar.observe(\.bounds, options: [.new], changeHandler: { (navigationBar, changes) in
+            if let height = changes.newValue?.height {
+                if height > 44.0 {
+                    //Large Title
+                    self.title = "Large Title"
+                } else {
+                    //Small Title
+                    self.title = "Small Title"
+                }
+            }
+        })
+    }
+}
+```
 

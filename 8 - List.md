@@ -70,6 +70,7 @@ users.add(User("Rodriguez",31))
 List(users, id: \.name){ user in
 	user.name .... etc
 }
+```
 
 ## Protocolo Identifiable
 
@@ -125,3 +126,14 @@ UITableViewCell.appearance().backgroundColor = .clear
 A los hijos le aplicamos
 .listRowBackground(Color.clear)
 
+
+Nota: También TENGA EN CUENTA QUE si desea usar un en List en lugar de ScrollView, debe agregar
+.listRowInsets(EdgeInsets())a ZStack para deshacerse del espacio en blanco adicional.
+
+## Estilos
+
+Estos estilos se colocan al terminal }
+
+- .listStyle(GroupedListStyle())
+- .listStyle(PlainListStyle())
+- .listRowSeparator(.hidden) // Solo IOS 15 se le coloca a la fila

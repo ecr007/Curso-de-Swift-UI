@@ -39,4 +39,7 @@ LazyVGrid(columns: gridItems, content: {
 A esta se le pueden pasar varios parametros:
 
 - .fixed(): El tamaño es fijo.
+
 - .adaptative(minimum: , maximum: ): No se controla el numero de vista a mostrar, si caben 5 vista la metera a todas
+
+- .flexible(minimum: ): Este es para una sola vista y se controla el numero de vista que se muestra en el bloque
