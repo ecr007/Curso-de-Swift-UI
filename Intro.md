@@ -23,7 +23,7 @@ Swift UI convive con los diferentes entornos de storyboard y UI Kit
 
 - Command + Click sobre un elemento, despligua el menu de opciones
 
-<img src="command+click.png" />
+<img src="/img/command+click.png" />
 
 ## Editar estilos de texto
 
@@ -150,7 +150,7 @@ var body: some View {
 
 ## Tamaños de textos
 
-<img src="dynamic-type-table.png" />
+<img src="/img/dynamic-type-table.png" />
 
 ## Detectar tamaño de fuente del sistema
 

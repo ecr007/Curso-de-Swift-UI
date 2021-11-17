@@ -2,4 +2,4 @@
 
 ## Soportar algunos recuadros; solo
 
-<img src="widget-support.png" />
+<img src="/img/widget-support.png" />
