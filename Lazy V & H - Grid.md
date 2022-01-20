@@ -40,6 +40,19 @@ A esta se le pueden pasar varios parametros:
 
 - .fixed(): El tamaño es fijo.
 
-- .adaptative(minimum: , maximum: ): No se controla el numero de vista a mostrar, si caben 5 vista la metera a todas
+- .adaptative(minimum: , maximum: ): No se controla el numero de vista a mostrar, si caben 5 vista la distribuira todas
+en la columna
 
-- .flexible(minimum: ): Este es para una sola vista y se controla el numero de vista que se muestra en el bloque
+- .flexible(minimum: ): Si no se le especifica ningun parametro se adapta perfectamente a la pantalla,
+se recomienda este ultimo para realizar grid perfectos
+
+```
+let grid:[GridItem] = [
+	GridItem(.flexible(), .spacing: nil, .alignment: nil),
+	GridItem(.flexible(), .spacing: nil, .alignment: nil),
+]
+```
+
+## Header Fixed
+
+<img src="img/LazyVGrid-avanzado.png" />
