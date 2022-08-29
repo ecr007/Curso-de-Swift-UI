@@ -48,8 +48,8 @@ se recomienda este ultimo para realizar grid perfectos
 
 ```
 let grid:[GridItem] = [
-	GridItem(.flexible(), .spacing: nil, .alignment: nil),
-	GridItem(.flexible(), .spacing: nil, .alignment: nil),
+	GridItem(.flexible(), spacing: nil, alignment: nil),
+	GridItem(.flexible(), spacing: nil, alignment: nil),
 ]
 ```
 
