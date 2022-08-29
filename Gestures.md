@@ -29,20 +29,20 @@ Todas las vistas tienen este modificador para que sea posible
     @GestureState private var tap:Bool = false
     @State private var press:Bool = false
 
-LongPressGesture().updating($tap){ currentState, gestureState, transaction in
-                            gestureState = currentState
-                            //print("Tap: Presionado")
-                        }
-                        .onEnded{ value in
-                            press.toggle()
-                            
-                            //print("Tap: Termino")
-                            
-                            
-                        }
-                        .onChanged{ _ in
-                            id = report.id
-                            
-                            
-                        }
-		```
+	LongPressGesture().updating($tap){ currentState, gestureState, transaction in
+	    gestureState = currentState
+	    //print("Tap: Presionado")
+	}
+	.onEnded{ value in
+	    press.toggle()
+
+	    //print("Tap: Termino")
+
+
+	}
+	.onChanged{ _ in
+	    id = report.id
+
+
+	}
+```
