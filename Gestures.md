@@ -25,7 +25,7 @@ Todas las vistas tienen este modificador para que sea posible
 
 ## On Press
 
-
+```swift
     @GestureState private var tap:Bool = false
     @State private var press:Bool = false
 
@@ -45,3 +45,4 @@ LongPressGesture().updating($tap){ currentState, gestureState, transaction in
                             
                             
                         }
+		```
